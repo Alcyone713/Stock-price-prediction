@@ -75,8 +75,13 @@ y_predicted = model.predict(x_test)
 scale_factor=1/0.00052396
 y_predicted= y_predicted* scale_factor
 y_test = y_test * scale_factor
+
 plt.plot(y_test)
-plt.plot(y_predicted)
+plt.plot(y_predicted, ls="dashed")
+plt.title("Google stock price")
+plt.xlabel("Days")
+plt.ylabel("Price");
+plt.grid()
 plt.show()
 
 
